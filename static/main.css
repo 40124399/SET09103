@@ -1,0 +1,77 @@
+body
+{
+  background-color:#269;
+  background-image: linear-gradient(white 2px, transparent 2px),
+  linear-gradient(90deg, white 2px, transparent 2px),
+  linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+  background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  font-family: monospace;
+}
+.header
+{
+
+  background-color: red;
+}
+.header h1
+{
+  background-color: #FFFF99;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  position: absolute;
+  left: 10%;
+  top: 5px;
+  text-align: center;
+  width: 80%;
+  border: 1px solid black;
+}
+.header ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  top: 62px;
+  width: 80.1%;
+  left:10%;
+  position: absolute;
+}
+.header ul li
+{
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+.header ul li a
+{
+  display: block;
+  width: 100%;
+  background-color: #FFFF99;
+  border: 1px solid black;
+  border-top: 0px;
+  font-size: 200%;
+  text-decoration: none;
+  color: #269;
+  padding-bottom: 5px;
+}
+.header ul li a:hover
+{
+  background-color: #269;
+  color: white;
+  transition: 0.5s;
+}
+.header ul li.mid
+{
+  width: 33.4%;
+}
+.main
+{
+  position: absolute;
+  top: 110px;
+  left: 5%;
+  width: 90%;
+  background-color: #FFFF99;
+  margin: 0;
+}
