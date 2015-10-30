@@ -13,21 +13,26 @@ def footer():
 
 @app.route('/search/', methods=["GET","POST"])
 def search():
-    html = ""
     bus = []
-    memoriZe=[]
+    bear = []
+    html = ''
+    empty = ''
+    memoriZe = []
     myFile = open("static/db.txt", "r")
     text = myFile.readline()
     while text:
         text = myFile.readline()
-        bus = text.split("*")
-        bear = bus[0]
-        div = '''<div class="Entity">''' + bear + '''</div>'''
-        html = div + html
+        if text != empty:
+           bus = text.split("*")
+           bear = bus[2]
+           div = '''<div class="Entity">''' + bear + '''</div>'''
+           html = div + html
     myFile.close()
     print html
-    print html + div
+    html = escape(html)
     info = html
+    print info
+    #return info
     return render_template('search.html', info=info)
 
 if __name__ == "__main__":
