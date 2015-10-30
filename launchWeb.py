@@ -1,5 +1,5 @@
 from sys import argv
-from flask import Flask, render_template
+from flask import Flask, render_template, escape, Markup
 app = Flask(__name__)
 
 @app.route('/')
@@ -29,8 +29,7 @@ def search():
            html = div + html
     myFile.close()
     print html
-    html = escape(html)
-    info = html
+    info = Markup(html)
     print info
     #return info
     return render_template('search.html', info=info)
