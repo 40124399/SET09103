@@ -9,6 +9,13 @@ body
   background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
   font-family: monospace;
 }
+h2
+{
+  font-size: 170%;
+  font-weight: normal;
+  margin-left: 25px;
+  margin-bottom: 50px;
+}
 .header
 {
 
@@ -86,10 +93,6 @@ body
   border: 1px solid black;
   background-color: #FFFF99;
 }
-.home img
-{
-  transform: scale(0.5, 0.5);
-}
 .search
 {
   position: absolute;
@@ -100,4 +103,39 @@ body
   padding-top: 5px;
   border: 1px solid black;
   background-color: #FFFF99;
+}
+.entity
+{
+  width: 100%;
+  top: 400px;
+  height: 250px;
+  background-color: #FFFF99;
+}
+.entity a
+{
+  margin-top: 35px;
+  font-size: 150%;
+  text-align: left;
+}
+.entity img
+{
+  margin: 15px;
+  margin-top: 25px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+.entity img:hover
+{
+  transform: scale(1.1, 1.1);
+  transition: 0.2s;
+}
+.seperate
+{
+  width: 100%;
+  height: 25px;
+}
+.entity b
+{
+  font-size: 110%;
 }
