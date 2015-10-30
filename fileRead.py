@@ -1,2 +1,5 @@
-f = open("fuck.txt", "r")
-f.read()
+import re
+
+f = open("static/db.txt", "r")
+stuff = f.read()
+print stuff

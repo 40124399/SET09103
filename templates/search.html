@@ -3,10 +3,12 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
   </head>
   <body>
-  {% extends "header.html" %}
-  {% block content %}
-  <p>wtf is this</p>
-  {{ tester }}
-  {% endblock %}
+    {% extends "header.html" %}
+    {% block content %}
+    <div class="search">
+      <p>wtf is this</p>
+      {{ info }}
+      {% endblock %}
+    </div>
   </body>
 </html>
