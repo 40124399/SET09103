@@ -28,14 +28,14 @@ def search():
         if text != empty:
            bus = text.split("*")
            #Creating image with custom link
-           ID = bus[0]
+           ID   = bus[0]
            NAME = bus[1]
            TYPE = bus[2]
            DESC = bus[3]
            IMAG = bus[4]
-           div = '''<div class="entity"><a href="specific/?ID=''' + ID + '''">''' + NAME + '''</a>'''
-           div = div + '''<a href="specific/?ID=''' + ID + '''"><img src="''' + IMAG + '''" align="left"></a>'''
-           div = div + '''<p></p><b>Type: </b>''' + TYPE + '''<p></p><b>Description: </b>''' + DESC + '''</div><div class="seperate"></div>'''
+           div  = '''<div class="entity"><a href="specific/?ID=''' + ID + '''">''' + NAME + '''</a>'''
+           div  = div + '''<a href="specific/?ID=''' + ID + '''"><img src="''' + IMAG + '''" align="left"></a>'''
+           div  = div + '''<p></p><b>Type: </b>''' + TYPE + '''<p></p><b>Description: </b>''' + DESC + '''</div><div class="seperate"></div>'''
            html = div + html
     myFile.close()
     print html
