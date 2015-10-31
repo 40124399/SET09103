@@ -7,7 +7,7 @@ def openFile( version, wID, wTYPE, wNAME ):
     bus = []
     bear = []
     memoriZe = []
-    html = ''
+    html = '''<div id="organize">'''
     empty = ''
     #All vlues initialized
 
@@ -27,13 +27,10 @@ def openFile( version, wID, wTYPE, wNAME ):
            if (wID != ID and version == 2 and wID != ""):
                pass
            elif (wTYPE != TYPE and version == 3):
-               print "Passing == %s" % TYPE
                pass
            elif (wNAME != NAME and version == 1):
-               print "passing"
                pass
            else:
-               print ID + NAME + TYPE + DESC
                #Creating html for image + name
                #Decided to add a number to the class so I have more css control
                # over different pages even though this does mean repetition in
@@ -44,9 +41,9 @@ def openFile( version, wID, wTYPE, wNAME ):
                #Creating html for Type and Description
                if (wID == ID and version == 2):
                    div = div + '''<p></p><b>Type: </b>''' + TYPE + '''<p></p><b>Description: </b>''' + DESC + '''</div><div class="seperate"></div>'''
-               html = div + html
-               print html
+               html = html + div
     myFile.close()
+    html = html + '''</div>'''
     info = Markup(html)
     return info
 

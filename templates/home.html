@@ -6,17 +6,22 @@
   <body>
   {% extends "header.html" %}
   {% block content %}
+        <div class="search">
+          <h2>Home:</h2>
+        </div>
         <div class="home">
           <h1>Game of the week:</h1>
-          <img src="http://www.gunnars.com/wp-content/uploads/2014/11/csgo.jpg"
-          alt="Cool CS GO pic."> 
-          <h2>Counter Strike: Global Offensive</h2>
-          Type:
-          <id="GameType">First person shooter</>
-          <p></p>
-          Synopsis:
-          <id="GameInfo">CS GO is a cool game.</>
-          <p><a href="/db">TESTING</a></p>
+          <a href="http://localhost:5000/specific/?ID=1"><img src="http://www.gunnars.com/wp-content/uploads/2014/11/csgo.jpg"
+          alt="Cool CS GO pic."></a>
+          <a href="http://localhost:5000/specific/?ID=1"><h2>Counter Strike: Global Offensive</h2></a>
+          <div id="homeText">
+            Type:
+            <id="GameType">First person shooter</>
+            <p></p>
+            Synopsis:
+            <id="GameInfo">CS GO is a cool game.</>
+            <p><a href="/db">TESTING</a></p>
+          </div>
         </div>
   </body>
 </html>
