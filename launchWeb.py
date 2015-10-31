@@ -1,9 +1,8 @@
 from sys import argv
-from flask import Flask, render_template, escape, Markup
+from flask import Flask, render_template, escape, Markup, request
 app = Flask(__name__)
 
 def openFile( version, wID, wTYPE, wNAME ):
-    print "function running..."
     #Initializing values
     bus = []
     bear = []
@@ -26,34 +25,50 @@ def openFile( version, wID, wTYPE, wNAME ):
            DESC = bus[3]
            IMAG = bus[4]
            if (wID != ID and version == 2 and wID != ""):
-               print "passing"
                pass
            elif (wTYPE != TYPE and version == 3):
-               print "passing"
+               print "Passing == %s" % TYPE
                pass
            elif (wNAME != NAME and version == 1):
                print "passing"
                pass
            else:
+               print ID + NAME + TYPE + DESC
                #Creating html for image + name
+               #Decided to add a number to the class so I have more css control
+               # over different pages even though this does mean repetition in
+               # the css. More code could alow an addition class to be placed
+               # though.
                div  = '''<div class="entity"><a href="http://localhost:5000/specific/?ID=''' + ID + '''">''' + NAME + '''</a>'''
                div  = div + '''<a href="http://localhost:5000/specific/?ID=''' + ID + '''"><img src="''' + IMAG + '''" align="left"></a>'''
                #Creating html for Type and Description
                if (wID == ID and version == 2):
-                   div  = div + '''<p></p><b>Type: </b>''' + TYPE + '''<p></p><b>Description: </b>''' + DESC + '''</div><div class="seperate"></div>'''
+                   div = div + '''<p></p><b>Type: </b>''' + TYPE + '''<p></p><b>Description: </b>''' + DESC + '''</div><div class="seperate"></div>'''
                html = div + html
+               print html
     myFile.close()
     info = Markup(html)
-    print "function ran."
     return info
 
 @app.route('/')
 def home():
-    work = "search"
-    return render_template('home.html', work=work)
+    return render_template('home.html')
 
-@app.route('/specific/<ID>', methods=['GET','POST'])
-def specific(ID):
+# = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = TYPE HERE
+@app.route('/type/<TYPE>', methods=['GET','POST'])
+def type(TYPE):
+    version = 3
+    wNAME = ""
+    wTYPE = TYPE.replace('_', ' ')
+    wID = ""
+    print wTYPE
+    info = openFile( version, wID, wTYPE, wNAME )
+    return render_template('type.html', info=info)
+
+
+@app.route('/specific/', methods=['GET','POST'])
+def specific():
+    ID = request.args.get('ID')
     version = 2
     wNAME = ""
     wTYPE = ""
@@ -64,8 +79,10 @@ def specific(ID):
     return render_template('specific.html', info=info)
 
 
-@app.route('/search/<SEARCH>', methods=["GET","POST"])
-def search(SEARCH):
+@app.route('/search/', methods=["GET","POST"])
+def search():
+    SEARCH = request.args.get('key')
+    print "working? :: %s" % SEARCH
     version = 1
     wNAME = SEARCH
     wTYPE = ""
