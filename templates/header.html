@@ -1,9 +1,14 @@
   	<div class="header">
-  		<h1>HOIJF's Catalogue</h1>
+      <a id="homeButton" href="http://localhost:5000"><img src="{{ url_for('static', filename='home.png') }}"></a>
+      <h1>HOIJF's Catalogue</h1>
+      <form id="searchBar" action="">
+        <input id="searchField" type="text" name="key" placeholder="Search..." required>
+        <input id="searchButton" type="submit" value="Submit">
+      </form>
       <nav><ul>
-        <li><a href="http://localhost:5000">First Person Shooters</a></li>
-        <li><a href="">Role Playing Games</a></li>
-        <li><a href="">Strategy Games</a></li>
+        <li id="menuFPS"><a href="http://localhost:5000">First Person Shooters</a></li>
+        <li id="menuRPG"><a href="">Role Playing Games</a></li>
+        <li id="menuSTR"><a href="">Strategy Games</a></li>
       </ul></nav>
   	</div>
 {% block content %} {% endblock %}

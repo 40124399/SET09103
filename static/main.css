@@ -1,13 +1,26 @@
 body
 {
-  background-color:#269;
-  background-image: linear-gradient(white 2px, transparent 2px),
-  linear-gradient(90deg, white 2px, transparent 2px),
-  linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
-  linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
-  background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
-  background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  background-image: url("wood2.png");
+  background-repeat: repeat;
   font-family: monospace;
+}
+#homeButton
+{
+  position: absolute;
+  z-index: 999;
+  left: 10%;
+  top: -5px;
+}
+#homeButton img
+{
+  height: 75px;
+  width: 75px;
+  opacity: 0.7;
+}
+#homeButton:hover
+{
+  transform: scale(1.1, 1.1);
+  transition: 0.2s;
 }
 h2
 {
@@ -18,12 +31,11 @@ h2
 }
 .header
 {
-
   background-color: red;
 }
 .header h1
 {
-  background-color: #FFFF99;
+  background: rgba(255, 255, 150, 0.5);
   margin: 0;
   padding: 0;
   padding-top: 10px;
@@ -34,6 +46,7 @@ h2
   text-align: center;
   width: 80%;
   border: 1px solid black;
+  border-bottom: 0px;
 }
 .header ul
 {
@@ -55,18 +68,18 @@ h2
 {
   display: block;
   width: 100%;
-  background-color: #FFFF99;
-  border: 1px solid black;
-  border-top: 0px;
+  background: rgba(255, 255, 150, 0.5);
   font-size: 200%;
   text-decoration: none;
   color: #269;
   padding-bottom: 5px;
+  border: 1px black solid;
+  border-top: 0px;
 }
 .header ul li a:hover
 {
   background-color: #269;
-  color: white;
+  color: #FFFFCC;
   transition: 0.5s;
 }
 .header ul li.mid
@@ -98,22 +111,26 @@ h2
   position: absolute;
   width: 70%;
   left: 15%;
-  top: 130px;
+  top: 140px;
   padding: 10px;
   padding-top: 5px;
-  border: 1px solid black;
-  background-color: #FFFF99;
+  background: rgba(255, 255, 150, 0.3);
+  opacity: 0.9;
+  border-radius: 5px;
+  border: 1px black solid;
 }
 .entity
 {
-  width: 100%;
+  margin: auto;
+  width: 90%;
   top: 400px;
   height: 250px;
   background-color: #FFFF99;
+  background-repeat: repeat;
+  border: solid 1px black;
 }
 .entity a
 {
-  margin-top: 35px;
   font-size: 150%;
   text-align: left;
 }
@@ -138,4 +155,39 @@ h2
 .entity b
 {
   font-size: 110%;
+}
+#searchBar
+{
+  position: absolute;
+  right: 15%;
+  top: 15px;
+}
+#searchField
+{
+  background-color: #FFFFCC;
+  border: 1px solid black;
+  border-radius: 5px 0px 0px 5px;
+  padding: 8px;
+  color: #269;
+}
+#searchField:hover
+{
+  background-color: #FFFFE5;
+  transition: 0.3s;
+}
+#searchButton
+{
+  position: relative;
+  padding: 8px;
+  left: -9px;
+  border: 1px solid black;
+  border-radius: 0px 20px 20px 0px;
+  color: #269;
+  background-color: #FFFFCC;
+}
+#searchButton:hover
+{
+  color: #FFFFCC;
+  background-color: #269;
+  transition: 0.3s;
 }
