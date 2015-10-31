@@ -1,11 +1,12 @@
 <!doctype html>
   <head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static' filename='maine.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
   </head>
   <body>
     {% extends "header.html" %}
     {% block content %}
     <div class="specific">
+      <h2>Info Sheet:</h2>
       {{ info }}
     </div>
   </body>

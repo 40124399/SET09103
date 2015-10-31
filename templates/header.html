@@ -1,7 +1,7 @@
   	<div class="header">
       <a id="homeButton" href="http://localhost:5000"><img src="{{ url_for('static', filename='home.png') }}"></a>
       <h1>HOIJF's Catalogue</h1>
-      <form id="searchBar" action="">
+      <form id="searchBar" action="http://localhost:5000/search/">
         <input id="searchField" type="text" name="key" placeholder="Search..." required>
         <input id="searchButton" type="submit" value="Submit">
       </form>
