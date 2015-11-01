@@ -31,9 +31,70 @@ h2
   margin-left: 25px;
   margin-bottom: 50px;
 }
+.footer
+{  
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  position: fixed;
+  left: 10%;
+  bottom: 0px;
+  text-align: center;
+  width: 80%;
+  border: 1px solid white;
+  border-bottom: 0px;
+  color: rgb(0, 0, 0);
+
+  height: 5%;
+  z-index: 999;
+}
+.footer ul
+{
+  left: -1%;
+  bottom: 5px;
+  list-style-type: none;
+  position: absolute;
+}
+.footer ul li
+{
+  float: left;
+}
+.footer ul li a
+{
+  margin: 0px;
+  padding: 1px;
+  color: #269;
+  display: list-item;
+  font-size: 1em;
+}
+.footer a:hover
+{
+  color: white;
+}
+#credits
+{
+  position: absolute;
+  color: white;
+  left: 30%;
+  bottom: 25px;
+}
 .header
 {
-  background-color: red;
+  z-index: 999;
+  position: fixed;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.0);
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  left: 10%;
+  top: 0px;
+  text-align: center;
+  width: 80%;
+  color: rgb(0, 0, 0);
 }
 .header h1
 {
@@ -43,13 +104,12 @@ h2
   padding-top: 10px;
   padding-bottom: 15px;
   position: absolute;
-  left: 10%;
   top: 5px;
   text-align: center;
-  width: 80%;
-  border: 1px solid black;
+  width: 100%;
+  border: 1px solid white;
   border-bottom: 0px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 2.8em;
 }
 .header ul
@@ -58,8 +118,7 @@ h2
   margin: 0;
   padding: 0;
   top: 73px;
-  width: 80.1%;
-  left:10%;
+  width: 100.1%;
   position: absolute;
 }
 .header ul li
@@ -77,7 +136,7 @@ h2
   text-decoration: none;
   color: #A40000;
   padding-bottom: 5px;
-  border: 1px black solid;
+  border: 1px white solid;
   border-top: 0px;
 }
 .header ul li a:hover
@@ -143,7 +202,7 @@ h2
   top: 140px;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  border: 1px black solid;
+  border: 1px white solid;
   max-width: 300px;
   height: 30px;
 }
@@ -152,6 +211,7 @@ h2
   transform: translate(-11px, -16px);
   display: block;
   white-space: nowrap;
+  color: white;
 }
 #organize
 {
@@ -170,7 +230,7 @@ h2
   background: rgba(0, 0, 0, 0.9);
   color: white;
   background-repeat: repeat;
-  border: solid 1px black;
+  border: solid 1px white;
 }
 .entity a
 {
@@ -183,12 +243,13 @@ h2
   margin-top: 25px;
   width: 200px;
   height: 200px;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 .entity img:hover
 {
   transform: scale(1.1, 1.1);
   transition: 0.2s;
+  border: 1px solid black;
 }
 .seperate
 {
@@ -202,13 +263,13 @@ h2
 #searchBar
 {
   position: absolute;
-  right: 15%;
+  right: 8%;
   top: 15px;
 }
 #searchField
 {
   background: rgba(0, 0, 0, 0.1);
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 5px 0px 0px 5px;
   padding: 8px;
   color: white;
@@ -223,14 +284,13 @@ h2
   position: relative;
   padding: 8px;
   left: -9px;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 0px 20px 20px 0px;
   color: rgb(228, 228, 230);
   background-color: #269;
 }
 #searchButton:hover
 {
-  color: black;
   background-color: #A40000;
   transition: 0.3s;
 }
